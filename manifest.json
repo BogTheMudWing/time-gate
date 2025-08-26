@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Time Gate",
+  "version": "1.0",
+
+  "description": "Set your browser time zone on a per-site basis.",
+  "homepage_url": "https://github.com/BogTheMudWing/time-gate",
+  "icons": {
+    "48": "icons/time-gate-48.png"
+  },
+
+  "permissions": ["storage", "scripting", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts/override_time.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/time-gate-32.png",
+    "default_title": "Time Gate",
+    "default_popup": "popup/set_time.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "time-gate@macver.org"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="set_time.css" />
+</head>
+
+<body>
+    <div id="popup-content">
+        <label for="timezone">Timezone:</label>
+        <input type="text" id="timezone" name="timezone" required />
+        <!-- <button>Click to set to America/Los_angeles</button> -->
+        <p>Check valid TZ identifiers on <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Wikipedia</a>.</p>
+        <button type="apply">Apply</button>
+        <button type="reset">Reset</button>
+    </div>
+    <div id="error-content" class="hidden">
+        <p>Can't modify the time zone of this web page.</p>
+        <p>Try a different page.</p>
+    </div>
+    <div id="reload-notice" class="hidden">
+        <p>Changes saved. Reload the page to apply.</p>
+    </div>
+    <script src="set_time.js"></script>
+</body>
+
+</html>
